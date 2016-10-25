@@ -1,16 +1,30 @@
-function roll(min, max) {
-  return (Math.floor(Math.random() * 6) +1);
+function Player(name, score, totalScore) {
+  this.name = name;
+  this.score = score;
+  this.totalScore = totalScore;
+
+  Player.prototype.roll = function() {
+   this.score= (Math.floor(Math.random() * 6) +1);
 }
 
-function add(total, roll) {
-  return (total + roll);
+    var totalScore = this.score += this.score;
+
 }
-var total = 0;
+
 
 $(document).ready(function() {
-  $("#roll-button").click(function() {
+  $("#roll-button").click(function(event) {
+    event.preventDefault();
+    $('#user-score').append(" ");
+      console.log("what are you doing");
 
-    $("#user-score").append(total)
+
+
+
+
+
+
+
 
 });
 });
