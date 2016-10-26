@@ -14,8 +14,10 @@ Player.prototype.addRollToScore = function() {
     if (this.roll === 1) {
       this.score === 0;
       this.playing === false;
-    } else
+    } else {
       this.score += this.roll;
+    }
+}
 
 Player.prototype.addToTotal = function() {
   this.total += this.score;
@@ -50,6 +52,7 @@ $(document).ready(function() {
       }
     }
   });
+
 
   $("button#hold").click(function(event) {
     event.preventDefault();
