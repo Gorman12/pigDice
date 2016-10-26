@@ -47,7 +47,7 @@ $(document).ready(function() {
       $(player1.rollDie());
       if (player1.roll === 1) {
         $(player1.scoreToZero());
-        $("#player1Score").text(player1.score);
+        $("#player1Score").text("");
         $("#player1Roll").text(player1.roll);
         $(player1.togglePlayer());
       } else {
@@ -59,7 +59,7 @@ $(document).ready(function() {
       $(player2.rollDie());
       if (player2.roll === 1) {
         $(player2.scoreToZero());
-        $("#player2Score").text(player2.score)
+        $("#player2Score").text("")
         $("#player2Roll").text(player2.roll);
         $(player1.togglePlayer());
       } else {
@@ -78,6 +78,10 @@ $(document).ready(function() {
     $(player1.togglePlayer());
     $("#player1Total").text(player1.total);
     $("#player2Total").text(player2.total);
+    $("#player1Score").text("");
+    $("#player2Score").text("");
+    $("#player1Roll").text("");
+    $("#player2Roll").text("");
     if (player1.checkForWinner() === true)
     alert("player1 wins!")
     if (player2.checkForWinner() === true)
