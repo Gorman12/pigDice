@@ -26,6 +26,14 @@ Player.prototype.scoreToZero = function() {
   this.score = 0;
 }
 
+Player.prototype.checkForWinner = function() {
+  if (this.total >= 100) {
+  return true;
+  } else {
+  return false;
+  }
+}
+
 var player1 = new Player("Adam", 0, 0, 0, true);
 var player2 = new Player("eve", 0, 0, 0, false)
 
@@ -70,5 +78,9 @@ $(document).ready(function() {
     $(player1.togglePlayer());
     $("#player1Total").text(player1.total);
     $("#player2Total").text(player2.total);
+    if (player1.checkForWinner() === true)
+    alert("player1 wins!")
+    if (player2.checkForWinner() === true)
+    alert("player2 wins!")
   });
 });
