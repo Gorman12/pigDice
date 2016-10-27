@@ -1,0 +1,14 @@
+.jumbotron {
+	text-align: center;
+	background-image: url(../img/pig-dice.jpg);
+}
+
+#button-style {
+	text-align: center
+}
+.btn-success, .btn-primary {
+	width: 100px;
+}
+.row-style {
+	text-align: center;
+}
